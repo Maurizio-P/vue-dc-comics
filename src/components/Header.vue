@@ -32,6 +32,7 @@ export default {
 
         .navbar{
             display: flex;
+            align-items: center;
             list-style: none;
 
             li{

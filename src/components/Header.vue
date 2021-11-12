@@ -2,23 +2,60 @@
   <header>
     <img alt="dc logo" src="../assets/dc-logo.png">
     <ul  class="navbar">
-        <li><a href="">Characters</a></li>
-        <li><a href="">Comics</a></li>
-        <li><a href="">Movies</a></li>
-        <li><a href="">Tv</a></li>
-        <li><a href="">Games</a></li>
-        <li><a href="">Collectibles</a></li>
-        <li><a href="">Videos</a></li>
-        <li><a href="">Fans</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Shop</a></li>
+        <li v-for="(link, i) in linkNav" :key="i"><a href="">{{link.linkText}}</a></li>
     </ul>
   </header>
 </template>
 
 <script>
 export default {
-    name: "Header"
+    name: "Header",
+    data(){
+        return {
+            linkNav: [
+                {
+                    linkText: "Characters",
+                    href: "#"
+                },
+                {
+                    linkText: "Comics",
+                    href: "#"
+                },
+                {
+                    linkText: "Movies",
+                    href: "#"
+                },
+                {
+                    linkText: "TV",
+                    href: "#"
+                },
+                {
+                    linkText: "Games",
+                    href: "#"
+                },
+                {
+                    linkText: "Collectibles",
+                    href: "#"
+                },
+                {
+                    linkText: "Videos",
+                    href: "#"
+                },
+                {
+                    linkText: "Fans",
+                    href: "#"
+                },
+                {
+                    linkText: "News",
+                    href: "#"
+                },
+                {
+                    linkText: "Shop",
+                    href: "#"
+                },
+            ]
+        }
+    }
 }
 </script>
 

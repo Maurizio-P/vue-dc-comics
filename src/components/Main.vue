@@ -1,22 +1,25 @@
 <template>
   <div class="bg-color">
-      <div class="container">
-          <h1>--->Contents goes here  </h1>
-      </div>
+        <Showcase />
   </div>
 </template>
 
 <script>
+import Showcase from './Showcase.vue'
+
 export default {
-    name: "Main"
+    name: "Main",
+    components: {
+        Showcase
+    }
 }
 </script>
 
 <style lang="scss">
 @import "../styles/variables";
     .bg-color{
-        background-color: black;
-        padding: ($paddingY * 2) 0 ;
+        background-color: #1c1c1c;
+        overflow: hidden;
 
         h1{
             color: white;
